@@ -59,7 +59,7 @@ app.post("/ticket", async (req, res) => {
        *
        */
   
-      res.status(201).send(crateRes);
+      res.status(200).send(crateRes);
     }
       
   } catch (error) {
