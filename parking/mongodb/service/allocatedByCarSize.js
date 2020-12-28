@@ -125,7 +125,8 @@ module.exports.allocatedByCarSize = async (req) => {
 
       if (findSlot) {
         /** crate Ticket */
-        let ticket = await axios.post("http://localhost:4001/ticket", {
+        const TICKETHOSR =  process.env.TICKETHOSR
+        let ticket = await axios.post(`http://${TICKETHOSR}:4001/ticket`, {
           type: "allocatedByCarSize",
           data: {
             numberPlate,
@@ -156,6 +157,7 @@ module.exports.allocatedByCarSize = async (req) => {
         findSlot["carSize"] = carSize;
         resolve(findSlot);
       } else {
+        mongoose.connection.close();
         reject({ meassage: "Slot Type : " + slotType + " is not Avalible" });
       }
     });

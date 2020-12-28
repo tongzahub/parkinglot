@@ -24,9 +24,11 @@ module.exports.checkinPackingSlot = async ({ slotId }) => {
         function (err, result) {
           if (err) {
             console.log(err);
+            mongoose.connection.close();
             reject(err);
           } else {
             console.log("result", result);
+            mongoose.connection.close();
             resolve(result);
           }
         }

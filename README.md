@@ -1,8 +1,10 @@
 
+<!-- ABOUT THE PROJECT -->
+## About The Packing Lot
 
-[![Product Name Screen Shot][packinglot-1]]
+[packinglot-1]
 
-[![Product Name Screen Shot][packinglot-2]]
+[packinglot-2]
 ## Pracking Lot API Service
 
 API | Method | Description | Example Params
