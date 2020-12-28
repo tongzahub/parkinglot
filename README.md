@@ -27,8 +27,12 @@ docker-compose up -d
 
 ```
 
+## Service Expose port
+- packing lot : 4002
+- ticket : 4002
 
 ## Pracking Lot API Service
+
 
 API | Method | Description | Example Params
 ------------ | ------------- | ------------- | -------------
@@ -55,6 +59,11 @@ API | Method | Description | Example Params
 - add event-bus service
 - update test script
 - deploy on k8s
+
+
+## Migration to aws (Serverless)
+- Change MongoDB (Docker) To AWS Dynamodb
+- Change Service (Docker)  To AWS Lanmbda and AWS APIGateway
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [packinglot-1]: images/packinglot-1.png
