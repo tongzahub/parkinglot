@@ -6,6 +6,7 @@ const axios = require("axios");
 const moment = require("moment-timezone");
 const validate = require("validate.js");
 const { insertTicker } = require("./mongodb/inserMongodb");
+const {reportDaily} = require("./mongodb/reportDaily")
 
 /** */
 var constraints = {
@@ -36,7 +37,7 @@ app.post("/ticket", async (req, res) => {
    */
 
   try {
-    const { numberPlate, carSize } = req.body.data;
+    const { numberPlate, carSize,packingId ,slotIndex} = req.body.data;
 
     let validateInput = await validate({ numberPlate, carSize }, constraints);
     if (validateInput) {
@@ -50,8 +51,12 @@ app.post("/ticket", async (req, res) => {
     
       ticket["numberPlate"] = numberPlate;
       ticket["carSize"] = carSize;
-      ticket["timeStampIn"] = moment().tz("Asia/Bangkok").format();
-  
+      let timeIn = moment().tz("Asia/Bangkok").format();
+      ticket["timeStampIn"] = timeIn
+      var splitDate = timeIn.split("T");
+      ticket["ticketDate"] = splitDate[0]
+      ticket["packingId"]=packingId
+      ticket["slotIndex"]= slotIndex
       let crateRes = await insertTicker(ticket);
   
       /**
@@ -67,6 +72,20 @@ app.post("/ticket", async (req, res) => {
   }
   
 });
+
+app.get("/ticket/report-daily", async (req, res) => {
+    try {
+        const {reportDate , packingId} =req.query
+
+        let reportDailyres  = await reportDaily({reportDate , packingId})
+        if(reportDailyres){
+             res.status(200).send(reportDailyres);
+        }
+   
+    } catch (error) {
+        res.status(400).send(error);
+    }
+})
 
 app.listen(4001, () => {
   console.log("Listening on 4001");

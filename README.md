@@ -1,10 +1,28 @@
 
 <!-- ABOUT THE PROJECT -->
-## About The Packing Lot
+## Ideas Packing Lot
 
-[packinglot-1]
+[! [packinglot-1] ]
 
-[packinglot-2]
+[!  [packinglot-2] ]
+
+
+## Mongodb Schema 
+
+[! [packinglot-packingprofile] ]
+
+[! [packinglot-packingmanagement] ]
+
+[! [packinglot-ticket] ]
+
+## Deployment
+```
+cd mongodb 
+docker-compose up -d
+
+```
+
+
 ## Pracking Lot API Service
 
 API | Method | Description | Example Params
@@ -30,3 +48,6 @@ API | Method | Description | Example Params
 <!-- MARKDOWN LINKS & IMAGES -->
 [packinglot-1]: images/packinglot-1.png
 [packinglot-2]: images/packinglot-2.png
+[packinglot-packingmanagement]: images/packinglot-packingmanagement.png
+[packinglot-packingprofile]: images/packinglot-packingmanagement.png
+[packinglot-ticket]: images/packinglot-ticket.png

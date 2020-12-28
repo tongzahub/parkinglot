@@ -12,6 +12,14 @@ let tickerSchema = new Schema(
     },
     timeStampIn: {
       type: String
+    },ticketDate :{
+      type: String
+    },
+    packingId :{
+      type: String
+    },
+    slotIndex:{
+      type:String
     }
   },
   { collection: "Ticket" }

@@ -122,7 +122,8 @@ module.exports.allocatedByCarSize = async (req) => {
     connection.once("open", async function () {
       //   try {
       let findSlot = await fingSlotByCarSize({ packingId, slotType });
-
+      console.log("findSlot",findSlot);
+      let slotIndex = findSlot.slotIndex
       if (findSlot) {
         /** crate Ticket */
         const TICKETHOSR =  process.env.TICKETHOSR
@@ -131,6 +132,8 @@ module.exports.allocatedByCarSize = async (req) => {
           data: {
             numberPlate,
             carSize,
+            packingId,
+            slotIndex
           },
         });
 
