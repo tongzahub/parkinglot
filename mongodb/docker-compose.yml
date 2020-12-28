@@ -8,3 +8,22 @@ services:
     restart: always
     ports:
       - 27017:27017
+    networks:
+      - backend
+  ticket:
+    container_name: ticket
+    build: ../ticket/
+    ports: 
+      - 4001:4001
+    networks:
+      - backend
+  packinglot:
+    container_name: packinglot
+    build: ../parking/
+    networks:
+      - backend
+    ports: 
+      - 4002:4002
+networks:
+   backend:
+
