@@ -71,7 +71,8 @@ API | Method | Description | Example Params
 
 ## Contact 
 Arthit Aunkeaw - tong.za.hub@gmail.com
-linkedin - [linkedin](www.linkedin.com/in/arthit-aunkeaw-790899148)
+
+linkedin - www.linkedin.com/in/arthit-aunkeaw-790899148
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [packinglot-1]: images/packinglot-1.png
