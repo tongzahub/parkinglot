@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "12064a46-483f-43ac-86d5-609c8d88f939",
+		"name": "packinglot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:4002/parking/crete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"S\":10,\n    \"M\":10,\n    \"L\":10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4002/parking/crete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4002",
+					"path": [
+						"parking",
+						"crete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4002/parking/status?packingId=5fe953d4706a52eb0cc25dc2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4002/parking/status?packingId=5fe953d4706a52eb0cc25dc2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4002",
+					"path": [
+						"parking",
+						"status"
+					],
+					"query": [
+						{
+							"key": "packingId",
+							"value": "5fe953d4706a52eb0cc25dc2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4002/parking/allocatedByCarSize",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"packingId\":\"5fe953d4706a52eb0cc25dc2\" ,\n    \"slotType\":\"S\" , \n    \"numberPlate\":\"กข 1234\" ,\n    \"carSize\":\"S\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4002/parking/allocatedByCarSize",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4002",
+					"path": [
+						"parking",
+						"allocatedByCarSize"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4002/parking/numberPlateInSlot?carSize=S&packingId=5fe94cd15d972c001e09beb5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4002/parking/numberPlateInSlot?carSize=S&packingId=5fe94cd15d972c001e09beb5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4002",
+					"path": [
+						"parking",
+						"numberPlateInSlot"
+					],
+					"query": [
+						{
+							"key": "carSize",
+							"value": "S"
+						},
+						{
+							"key": "packingId",
+							"value": "5fe94cd15d972c001e09beb5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4002/parking/checkin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"slotId\":\"5fe94cd15d972c001e09beb6\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4002/parking/checkin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4002",
+					"path": [
+						"parking",
+						"checkin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4002/parking/leave",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"slotId\":\"5fe94cd15d972c001e09beb6\",\n    \"packingId\" : \"5fe94cd15d972c001e09beb5\",\n    \"slotType\":\"S\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4002/parking/leave",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4002",
+					"path": [
+						"parking",
+						"leave"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4001/ticket/report-daily?reportDate=2020-12-28&packingId=5fe953d4706a52eb0cc25dc2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4001/ticket/report-daily?reportDate=2020-12-28&packingId=5fe953d4706a52eb0cc25dc2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"ticket",
+						"report-daily"
+					],
+					"query": [
+						{
+							"key": "reportDate",
+							"value": "2020-12-28"
+						},
+						{
+							"key": "packingId",
+							"value": "5fe953d4706a52eb0cc25dc2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
