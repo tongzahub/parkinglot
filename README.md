@@ -2,14 +2,14 @@
 <!-- ABOUT THE PROJECT -->
 ## Ideas Packing Lot
 
-[! [packinglot-1] ]
+![packinglot-1] 
 
-[!  [packinglot-2] ]
+![packinglot-2] 
 
 
 ## Mongodb Schema 
 
-[! [packinglot-packingprofile] ]
+! [packinglot-packingprofile] 
 
 [! [packinglot-packingmanagement] ]
 
