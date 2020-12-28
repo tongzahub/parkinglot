@@ -1,3 +1,8 @@
+### Problem Statement 
+
+I own a parking lot that can hold up to ‘n’ cars at any given point in time. I want to create an automated ticketing system that allows my customers to use my parking lot without human intervention. 
+When a car enters my parking lot, I want to have a ticket issued to the driver. The ticket information contains the registration number (number plate) and the car size and allocated parking slot (we assume that our customers are nice enough to always park in the slots allocated to them). The customer should be allocated a parking slot which is nearest to the entry. At the exit the customer returns the ticket which then marks the slot they were using as being available. 
+
 
 <!-- ABOUT THE PROJECT -->
 ## Ideas Packing Lot
@@ -11,9 +16,9 @@
 
 ! [packinglot-packingprofile] 
 
-[! [packinglot-packingmanagement] ]
+! [packinglot-packingmanagement]
 
-[! [packinglot-ticket] ]
+! [packinglot-ticket] 
 
 ## Deployment
 ```
@@ -44,6 +49,12 @@ API | Method | Description | Example Params
 /ticket | POST | Create Ticket |{"numberPlate" :"xx", "carSize":"S"}
 /ticket/report-daily | GET | list  daily ticket  |{"date" :"xx", "packingId":"S"}
 
+
+
+## Improve Plan
+- add event-bus service
+- update test script
+- deploy on k8s
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [packinglot-1]: images/packinglot-1.png
