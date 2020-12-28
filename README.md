@@ -14,11 +14,11 @@ When a car enters my parking lot, I want to have a ticket issued to the driver. 
 
 ## Mongodb Schema 
 
-! [packinglot-packingprofile] 
+![packinglot-packingprofile] 
 
-! [packinglot-packingmanagement]
+![packinglot-packingmanagement]
 
-! [packinglot-ticket] 
+![packinglot-ticket] 
 
 ## Deployment
 ```
