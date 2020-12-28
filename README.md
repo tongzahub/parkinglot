@@ -31,6 +31,8 @@ docker-compose up -d
 - packing lot : 4002
 - ticket : 4002
 
+![packinglot-docker]
+
 ## Pracking Lot API Service
 
 
@@ -65,9 +67,16 @@ API | Method | Description | Example Params
 - Change MongoDB (Docker) To AWS Dynamodb
 - Change Service (Docker)  To AWS Lanmbda and AWS APIGateway
 
+
+
+## Contact 
+Arthit Aunkeaw - tong.za.hub@gmail.com
+linkedin - [linkedin](www.linkedin.com/in/arthit-aunkeaw-790899148)
+
 <!-- MARKDOWN LINKS & IMAGES -->
 [packinglot-1]: images/packinglot-1.png
 [packinglot-2]: images/packinglot-2.png
 [packinglot-packingmanagement]: images/packinglot-packingmanagement.png
 [packinglot-packingprofile]: images/packinglot-packingmanagement.png
 [packinglot-ticket]: images/packinglot-ticket.png
+[packinglot-docker]: images/packinglot-docker.png
