@@ -45,7 +45,9 @@ app.get("/parking/numberPlateInSlot", async (req, res) => {
    */
 
   try {
-    const { slotType, packingId } = req.query;
+    // const { slotType, packingId } = req.query;
+    const { carSize, packingId } = req.query;
+    let slotType = carSize.toLocaleUpperCase()
     let reslistNumberPlateBySlotType = await listNumberPlateBySlotType({
       slotType,
       packingId,
